@@ -16,12 +16,18 @@ const AppStack = () => (
                 component={IndexScreen}
                 options={{
                     title: 'Movies App',
+                    headerTitleAlign: "center",
                     headerStyle: {
-                        backgroundColor: '#2c3e50'
+                        backgroundColor: '#2c3e50',
+                        justifyContent: 'center'
+
                     },
                     headerTitleStyle: {
                         color: '#fff'
+
                     }
+
+
                 }}
             />
             <Stack.Screen

@@ -6,8 +6,8 @@ import Tabs from '../layout/Tabs'
 const IndexScreen = ({ navigation }) => {
     return (
         <>
-            <Tabs />
-            <Selection navigation={navigation} />
+            <Tabs navigation={navigation} />
+            
         </>
     )
 

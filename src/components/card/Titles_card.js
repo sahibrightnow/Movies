@@ -8,7 +8,7 @@ const Titles_card = ({popularity, release, src, name, overview, navigation}) => 
       <HStack mt="2" ml="2">
         <Image source={{
           uri: src
-        }} alt="Alternate Text" size={'xl'} />
+        }} alt={name} size={'xl'} />
         <VStack ml="2" m="auto">
           <Text bold="true">
           {name}

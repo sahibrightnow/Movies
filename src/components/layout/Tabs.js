@@ -1,22 +1,29 @@
 import React from 'react';
-import { HStack, Center } from 'native-base';
 
-const Tabs = () => {
-    
+
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+
+import Selection from './Selection';
+import Search from '../layout/Search'
+
+
+const Tab = createMaterialTopTabNavigator();
+
+
+function Tabs({navigation}) {
+
+   
     return (
-        <HStack space={3} justifyContent="space-around">
-            <Center flex={1} my="4">
-                Movies
-            </Center>
-            <Center flex={1} my="4">
-                Search Results
-            </Center>
-            <Center flex={1} my="4">
-                TV Shows
-            </Center>
-        </HStack>
+        <Tab.Navigator screenOptions={{
+            tabBarLabelStyle: { fontSize: 12 },
 
-    )
+
+        }}>
+            <Tab.Screen name="Movies" children={() => <Selection category="movie" navigation={navigation}/>} />
+            <Tab.Screen name="Search Results" children={() => <Search  navigation={navigation}/>} />
+            <Tab.Screen name="TV Shows" children={() => <Selection category="tv" navigation={navigation}/>} />
+
+        </Tab.Navigator>
+    );
 }
-
 export default Tabs
